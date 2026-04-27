@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido Especial 💖</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #ffdde1;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 30px;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center; /* CENTRALIZA */
+      gap: 20px; /* espaço entre botões */
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #sim {
+      background: #2196F3; /* azul */
+      color: white;
+    }
+
+    #nao {
+      background: #f44336; /* vermelho */
+      color: white;
+    }
+
+    #videoContainer {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Quer namorar comigo? 💕</h1>
+
+  <!-- FOTO -->
+  <img src="foto.jpg" alt="Nós dois">
+
+  <div class="buttons">
+    <button id="sim">SIM 😍</button>
+    <button id="nao">NÃO 😈</button>
+  </div>
+
+  <!-- VÍDEO -->
+  <div id="videoContainer">
+    <h2>Sabia que você ia dizer sim 😎❤️</h2>
+    <video width="300" controls>
+      <source src="video.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+  </div>
+
+  <script>
+    const btnSim = document.getElementById("sim");
+    const btnNao = document.getElementById("nao");
+    const video = document.getElementById("videoContainer");
+
+    // Clique no SIM
+    btnSim.onclick = () => {
+      video.style.display = "block";
+    };
+
+    // Clique no NÃO
+    btnNao.onclick = () => {
+      alert("Por que? 😭💔");
+    };
+  </script>
+
+</body>
+</html>
